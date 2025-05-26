@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farme To Home</title>
+    <link rel="icon" type="image/jpeg" href="png/FTH.jpeg">
+    <style>
+        :root{
+            --c :  #54cb6c;
+            --c1 : #02cc2a;
+            --c2 : #266b33;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        * {
+            margin: 0px ;
+            padding: 0;
+        }
+        @media screen and (min-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: uanimation 5s ease-in;
+                background-color: #fbfffb;
+            }
+            
+            
+        }
+        @media screen and (max-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: aanimation 5s ease-in;
+                background-color: #7bf87b;
+            }
+            
+        }
+        @keyframes aanimation {
+                    0%{
+                        background-color: #fbfffb;
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #7bf87b; 
+                    }
+                }
+        @keyframes uanimation {
+                    0%{
+                        background-color: #7bf87b; 
+                        
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #fbfffb;
+                        
+                    }
+                }
+        .container{
+            margin: 0px;
+            padding: 3px;
+            height: auto;
+            width: 100vw;
+            border: 2px solid var(--c2);
+            display: flex;
+            background-color: var(--c);
+            flex-direction: row ;
+            position: fixed;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .container1{
+            
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+        .container3{
+            margin: 4vi;
+            background-color: #02cc2a19;
+            padding: 2vi;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .container_3{
+            width: 85vw;
+            height: auto;
+            background-color: #02cc2a56;
+            margin: 2vi;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 2px var(--c2);
+        }
+        #img_div{
+            padding: 5px;
+            width: 150px;
+            height: 150px;
+            
+            
+        }
+
+        .f1{
+            
+            width: auto;
+            height: 42px;
+            border: 1px solid var(--c1);
+            display: flex;
+            border-radius: calc(5px);
+            flex-direction: row ;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+
+        #FTHi{
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+            border-radius: 5px;
+            
+            
+            
+        }
+        #f12{
+            align-content: center;
+            margin: 5px;
+        }
+        .search{
+            display: flex;
+            margin-bottom: 5px;
+            width: 180px;
+        }
+        .first{
+            justify-content: center;
+        }
+        .f3{
+            margin:0px 10px 20px 0px ;
+        }
+        button{
+            margin: 2px;
+            background-color: var(--c1);
+            padding: 5px;
+            border-radius: calc(5px);
+        }
+        a{
+            text-decoration: none;
+            text-decoration-color: black;
+        }
+
+
+        .search-bar {
+            width: 100px;
+            padding: 3px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            font-size: 10px;
+        }
+
+        .search-bar:focus {
+            border-color: var(--c1);
+        }
+
+        .search-button {
+            background-color: var(--c1);
+            color: white;
+            padding: 3px 15px;
+            border: none;
+            border-radius: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+
+        .search-button:hover {
+            border: 2px solid var(--c2) ;
+        }
+        .search-button:active{
+            background-color: var(--c1);
+        }
+
+        .search-button:focus {
+            outline: none;
+        }
+        
+        .slides {
+            height: auto;
+            display: none;
+            margin-top: 100px;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px 5px var(--c2);
+        }
+        .slides:hover{
+            transform: scale(1.03);
+            transition: transform 0.5s ease;
+            
+        }
+        
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .active {
+            background-color: black;
+        }
+
+
+        .container2{
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #itemsimg{
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #514518;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px var(--c2);
+        }
+        #itemsimg:hover{
+            transform: scale(1.08);
+            transition: transform 0.5s ease;
+        }
+        #iteinfo{
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            
+        }
+        .totalItemAbl{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .itemshref{
+            text-decoration: none;
+            text-decoration-color: black;
+        }
+
+        #img_div_img{
+            border-radius: 30px;
+            border: 2px solid rgba(57, 20, 20, 0.493);
+            box-shadow: 0 2px 5px 2px var(--c2);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        #info_div{
+            padding: 5px 0px 50px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-decoration-color: black;
+        }
+        #text{
+            text-decoration: none;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- Header Element -->
+
+    <div class="container">
+        <div class="first f1">
+            <div id="f11">
+                <!-- Logo --> <img src="png/FTH.jpeg" alt="" id="FTHi">
+            </div>
+            <div id="f12">
+                <!-- NAME OF WEBSITE --> <h4>Farme To Home</h4>
+            </div>
+        </div>
+        <div class="search" >
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search... શોધો" >
+            <button class="search-button" onclick="" >Search | શોધો  </button>
+        </div>
+        <div class="first f3">
+            <a href="login/index.html">
+                <div id="f31">
+                    <!-- SU TAME KHEDUT CHHO --> <button>
+                        ખેડૂત લોગિન
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Slider Element -->
+
+    <div class="container1">
+            <img class="slides" src="png\download (1).jpeg" alt="Image 1">
+            <img class="slides" src="png/download (2).jpeg" alt="Image 2">
+            <img class="slides" src="png/download (3).jpeg" alt="Image 3">
+            <img class="slides" src="png/download (4).jpeg" alt="Image 4">
+            <img class="slides" src="png/download.jpeg" alt="Image 5">
+            <img class="slides" src="png/im1.jpeg" alt="Image 6">
+            <img class="slides" src="png/im2.jpeg" alt="Image 7">
+            <img class="slides" src="png/OIP (1).jpeg" alt="Image 8">
+            <img class="slides" src="png/OIP (2).jpeg" alt="Image 9">
+            <img class="slides" src="png/OIP.jpeg" alt="Image 10">
+        <div class="dots">
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+            <span class="dot" onclick="setSlide(4)"></span>
+            <span class="dot" onclick="setSlide(5)"></span>
+            <span class="dot" onclick="setSlide(6)"></span>
+            <span class="dot" onclick="setSlide(7)"></span>
+            <span class="dot" onclick="setSlide(8)"></span>
+            <span class="dot" onclick="setSlide(9)"></span>
+            <span class="dot" onclick="setSlide(10)"></span>
+        </div>
+    </div>
+
+    <!-- Menu of Items -->
+
+    <div class="container2">
+        <div class="totalItemAbl">
+            <!-- How many items are avaiable in this site -->
+
+            <a href="First Item/index.html" class="itemshref">
+                <div id="iteinfo">
+                    <img id="itemsimg" src="png/રોકડિયા.jpeg" alt="" ><b>રોકડિયા પાક</b>
+                </div>
+                
+            </a>
+
+            <a href="Second Item/index.html" class="itemshref">
+                <div id="iteinfo">
+                    <img id="itemsimg" src="png/અનાજ.jpeg" alt="" ><b>અનાજ</b>
+                </div>
+            </a>
+            
+            <a href="Trird Item/index.html" class="itemshref">
+                <div id="iteinfo">
+                    <img id="itemsimg" src="png/ફળો .jpeg" alt="" ><b>ફળો</b>
+                </div>
+            </a>
+            
+            <a href="Fourth Item/index.html" class="itemshref">
+                <div id="iteinfo">
+                    <img id="itemsimg" src="png/મસાલા.jpg" alt="" ><b>મસાલા</b>
+                </div>
+            </a>
+            
+            <a href="Fifth Item/index.html" class="itemshref">
+                <div id="iteinfo">
+                    <img id="itemsimg" src="png/શાકભાજી.jpeg" alt="" ><b>શાકભાજી</b>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Top popular seller -->
+    <div class="container3">
+        <h3>For You</h3>
+        
+    </div>
+
+     <!-- About the site -->
+    <div class="container4">
+       
+    </div>
+
+    <div class="container5">
+
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+
+</html>

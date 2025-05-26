@@ -1,0 +1,41 @@
+{
+    "Farme To Home": {
+        "file1" : "index.html",
+        "file2" : "script.js",
+        "file3" : "plan.json",
+        "file4" : "plan.txt",
+        "folder1-login": {
+            "file1" : "index.html",
+            "file2": "script.js",
+            "folder1-after login true": {},
+            "folder2-database": {},
+            "folder3-logic" : {},
+            "folder4-pnglogin":{}
+        },
+        "folder2-png" : {
+            "png1":"download (1).jpeg",
+            "png2":"download (2).jpeg",
+            "png3":"download (3).jpeg",
+            "png4":"download (4).jpeg",
+            "png5":"download.jpeg",
+            "png6":"FTH.jpeg",
+            "png7":"im1.jpeg",
+            "png8":"im2.jpeg",
+            "png9":"OIP (1).jpeg",
+            "png10":"OIP (2).jpeg",
+            "png11":"OIP.jpeg",
+            "png12":"poteto.jpeg",
+            "png13":"અનાજ.jpeg",
+            "png14":"કપાસ.jpg",
+            "png15":"ફળો .jpeg",
+            "png16":"મસાલા.jpg",
+            "png17":"રોકડિયા.jpeg",
+            "png18":"શાકભાજી.jpeg"
+        },
+        "folder3-First Item" : {},
+        "folder4-Second Item" : {},
+        "folder5-Third Item" : {},
+        "folder6-Fourth Item" : {},
+        "folder7-Fifth Item" : {} 
+    }
+}

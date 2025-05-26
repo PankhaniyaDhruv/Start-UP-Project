@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+    <link rel="icon" type="image/jpeg" href="pnglogin/FTH.jpeg">
+    <style>
+        /* Reset some default styles */
+        :root{
+            --c :  #54cb6c;
+            --c1 : #02cc2a;
+            --c2 : #266b33;
+        }
+        body{
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        * {
+            margin: 0px ;
+            padding: 0;
+        }
+        @media screen and (min-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: uanimation 5s ease-in;
+                background-color: #fbfffb;
+            }
+            
+            
+        }
+        @media screen and (max-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: aanimation 5s ease-in;
+                background-color: #7bf87b;
+            }
+            
+        }
+        @keyframes aanimation {
+                    0%{
+                        background-color: #fbfffb;
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #7bf87b; 
+                    }
+                }
+        @keyframes uanimation {
+                    0%{
+                        background-color: #7bf87b; 
+                        
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #fbfffb;
+                        
+                    }
+                }
+
+        /* Main container */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Login box styling */
+        .login-box {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        /* Heading */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Input fields */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-group input:focus {
+            border-color: var(--c1);
+            outline: none;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--c1);
+            color: rgb(75, 36, 18);
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            --c2:#3bad50;
+            background-color: var(--c2);
+        }
+
+        /* Error message */
+        .error-message {
+            color: rgb(106, 64, 16);
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .login-box {
+                padding: 20px;
+                max-width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <label for="username">નામ</label>
+                    <input type="text" id="username" name="username" required placeholder="તમારું નામ અંહિ લખો">
+                </div>
+                <div class="input-group">
+                    <label for="Mobile">મોબાઇલ નં.</label>
+                    <input type="number" id="mobile" name="mobile" required placeholder="તમારો મોબાઇલ નંબર દાખલ કરો.">
+                </div>
+                <div class="input-group">
+                    <label for="OTP">OTP</label>
+                    <input type="OTP" id="OTP" name="OTP" placeholder="Enter your OTP">
+                </div>
+                
+                <button type="button" class="btn" id="send">Send</button>
+                <button type="button" class="btn" id="check">Check</button>
+                <button type="submit"  class="btn">લોગિન</button>
+            </form>
+            
+            <p class="error-message" id="error-message"></p>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
+
+
+
+

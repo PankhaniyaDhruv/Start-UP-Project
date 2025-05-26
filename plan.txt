@@ -1,0 +1,7 @@
+first we going craete a software which communicat between 
+farmer and normal people 
+normal people got pop that access location.
+1. farmer register - Number , user_name , OTP
+2. farmer upload his product 
+3. normal people can watch thier product 
+4. normal people can sort product by price , Qulity , KM.

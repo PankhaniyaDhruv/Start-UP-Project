@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Selected</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --c: #54cb6c;
+            --c1: #02cc2a;
+            --c2: #266b33;
+            --c3: rgb(104, 15, 15);
+        }
+
+        @media screen and (min-width: 500px) {
+            .f2 {
+                flex-direction: column;
+            }
+
+            body {
+                animation: uanimation 5s ease-in;
+                background-color: #fbfffb;
+            }
+
+
+        }
+
+        @media screen and (max-width: 500px) {
+            .f2 {
+                flex-direction: column;
+            }
+
+            body {
+                animation: aanimation 5s ease-in;
+                background-color: #7bf87b;
+            }
+
+        }
+
+        @keyframes aanimation {
+            0% {
+                background-color: #fbfffb;
+            }
+
+            50% {
+                background-color: #c2fac2;
+            }
+
+            100% {
+                background-color: #7bf87b;
+            }
+        }
+
+        @keyframes uanimation {
+            0% {
+                background-color: #7bf87b;
+
+            }
+
+            50% {
+                background-color: #c2fac2;
+            }
+
+            100% {
+                background-color: #fbfffb;
+
+            }
+        }
+
+        .container {
+            margin: 0px;
+            padding: 3px;
+            height: auto;
+            width: 100vw;
+            border: 2px solid var(--c2);
+            display: flex;
+            background-color: var(--c);
+            flex-direction: row;
+            position: fixed;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .f1 {
+
+            width: auto;
+            height: 42px;
+            border: 1px solid var(--c1);
+            display: flex;
+            border-radius: calc(5px);
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+
+        #FTHi {
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+            border-radius: 5px;
+
+
+
+        }
+
+        #f12 {
+            align-content: center;
+            margin: 5px;
+        }
+
+        .first {
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+
+
+        #line {
+            width: 100vw;
+            height: 3px;
+            margin-top: 30px;
+            background-color: var(--c3);
+            border-radius: 20px;
+            box-shadow: 0 2px 10px 2.5px var(--c3);
+        }
+
+        .container1 {
+            display: flex;
+            height: auto;
+            flex-direction: row;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slides {
+            height: auto;
+            margin-top: 100px;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px 5px var(--c2);
+        }
+
+        .slides:hover {
+            transform: scale(1.03);
+            transition: transform 0.5s ease;
+
+        }
+
+        .container2 {
+            margin: 30px 10vi;
+            background-color: #c2fac2;
+            width: 80vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 3px var(--c2);
+        }
+
+        #detailes {
+            display: flex;
+            margin: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first f1">
+            <div id="f11">
+                <!-- Logo --> <img src="png/FTH.jpeg" alt="" id="FTHi">
+            </div>
+            <div id="f12">
+                <!-- NAME OF WEBSITE -->
+                <h4>Farme To Home</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <img class="slides" src="png\download (1).jpeg" alt="Image 1">
+    </div>
+    <div id="line"></div>
+    <div class="container2">
+        <div id="detailes">
+            <b> Product :</b> NAME
+
+        </div>
+        <div id="detailes">
+            <b> Catedari :</b> rokadiya pak
+
+        </div>
+        <div id="detailes">
+            <b>Farmer Name :</b> Rajubhai kukadiya
+
+        </div>
+        <div id="detailes">
+            <b> duration :</b> 3 year
+
+        </div>
+        <div id="detailes">
+            <b> Location :</b> Junagadh
+
+        </div>
+        <div id="detailes">
+
+            <b> Mobile :</b> +919876098734
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

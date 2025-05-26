@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>અનાજ</title>
+    <style>
+        :root{
+            --c :  #54cb6c;
+            --c1 : #02cc2a;
+            --c2 : #266b33;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        * {
+            margin: 0px ;
+            padding: 0;
+        }
+        @media screen and (min-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: uanimation 5s ease-in;
+                background-color: #fbfffb;
+            }
+            
+            
+        }
+        @media screen and (max-width: 500px) {
+            .f2{
+                flex-direction: column;
+            }
+            body{
+                animation: aanimation 5s ease-in;
+                background-color: #7bf87b;
+            }
+            
+        }
+        @keyframes aanimation {
+                    0%{
+                        background-color: #fbfffb;
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #7bf87b; 
+                    }
+                }
+        @keyframes uanimation {
+                    0%{
+                        background-color: #7bf87b; 
+                        
+                    }
+                    50% { 
+                        background-color: #c2fac2;
+                    }
+                    100% {
+                        background-color: #fbfffb;
+                        
+                    }
+                }
+        .container{
+            margin: 0px;
+            padding: 3px;
+            height: auto;
+            width: 100vw;
+            border: 2px solid var(--c2);
+            display: flex;
+            background-color: var(--c);
+            flex-direction: row ;
+            position: sticky;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        #img_div{
+            padding: 5px;
+            width: 150px;
+            height: 150px;
+            
+            
+        }
+        .f1{
+            
+            width: auto;
+            height: 42px;
+            border: 1px solid var(--c1);
+            display: flex;
+            border-radius: calc(5px);
+            flex-direction: row ;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        #FTHi{
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+            border-radius: 5px;
+            
+            
+            
+        }
+        #f12{
+            align-content: center;
+            margin: 5px;
+        }
+        .search{
+            display: flex;
+            margin-bottom: 5px;
+            width: 180px;
+            margin-right: 25vi;
+        }
+        .first{
+            justify-content: center;
+        }
+        .f3{
+            margin:0px 10px 20px 0px ;
+            display: none;
+        }
+        button{
+            margin: 2px;
+            background-color: var(--c1);
+            padding: 5px;
+            border-radius: calc(5px);
+        }
+        a{
+            text-decoration: none;
+        }
+        .search-bar {
+            width: 100px;
+            padding: 3px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            font-size: 10px;
+        }
+
+        .search-bar:focus {
+            border-color: var(--c1);
+        }
+
+        .search-button {
+            background-color: var(--c1);
+            color: white;
+            padding: 3px 15px;
+            border: none;
+            border-radius: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+
+        .search-button:hover {
+            border: 2px solid var(--c2) ;
+        }
+        .search-button:active{
+            background-color: var(--c1);
+        }
+
+        .search-button:focus {
+            outline: none;
+        }
+        .container1{
+            height: 40px;
+            width: 25vw;
+            margin-left: 40vw;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--c1);
+            border: 2px solid var(--c2);
+            border-radius: 5px;
+        }
+        .container3{
+            margin: 4vi;
+            background-color: #02cc2a19;
+            padding: 2vi;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .container_3{
+            width: 85vw;
+            height: auto;
+            background-color: #02cc2a56;
+            margin: 2vi;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 2px var(--c2);
+        }
+        #img_div_img{
+            border-radius: 30px;
+            border: 2px solid rgba(57, 20, 20, 0.493);
+            box-shadow: 0 2px 5px 2px var(--c2);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        #info_div{
+            padding: 5px 0px 50px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first f1">
+            <div id="f11">
+                <!-- Logo --> <img src="png/FTH.jpeg" alt="" id="FTHi">
+            </div>
+            <div id="f12">
+                <!-- NAME OF WEBSITE --> <h4>Farmer To Home</h4>
+            </div>
+        </div>
+        <div class="search" >
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search... શોધો" >
+            <button class="search-button" >Search | શોધો  </button>
+        </div>
+        <div class="first f3">
+            <a href="login/index.html">
+                <div id="f31">
+                    <!-- SU TAME KHEDUT CHHO --> <button>
+                        ખેડૂત લોગિન
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container1">
+        <div id="text">
+            <b>અનાજ</b>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
